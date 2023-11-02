@@ -1,18 +1,41 @@
-*/config/development
-*/logs/log-*.php
-!*/logs/index.html
-*/cache/*
-!system/cache/*
-!*/cache/index.html
-!*/cache/.htaccess
+# Ignore CodeIgniter 4 writable directory
+writable/
 
-user_guide_src/build/*
-user_guide_src/cilexer/build/*
-user_guide_src/cilexer/dist/*
-user_guide_src/cilexer/pycilexer.egg-info/*
+# Ignore vendor directory (assuming you use Composer for dependencies)
+vendor/
 
-#codeigniter 3
-application/logs/*
-!application/logs/index.html
-!application/logs/.htaccess
-/vendor/
+# Ignore application-specific environment configuration files
+app/Config/Production/
+app/Config/Development/
+app/Config/Testing/
+
+# Ignore development and debugging files
+.env
+.env.example
+.env.testing
+.env.local
+composer.lock
+composer.json
+
+# Ignore logs
+writable/logs/
+
+# Ignore cache
+writable/cache/
+
+# Ignore temporary files
+writable/debugbar/
+writable/session/
+
+# Ignore VS Code specific files (customize this for your editor/IDE)
+.vscode/
+
+# Ignore database configuration file
+app/Config/Database.php
+
+# Ignore PHPStorm specific files
+.idea/
+*.iml
+
+# Ignore code coverage reports
+.coverage/
